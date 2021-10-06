@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+ <head><title>Performing loop computation</title></head>
+<body>
+
+<h2>Shruthi Battu computes</h2>
+
+<form >
+    <label for="base_element">Enter a base</label>
+    <input type ="number" id="base" name="base_element"  value=10> <br>
+<br>
+    <label for="exponent_element">Enter an exponent</label>
+    <input type ="number" id="exponent" name="exponent_element" value=2> <br>
+<br>
+    <input type="button" onclick="powers()" value="Compute">
+    
+</form>
+<p id="output">The result will be replaced </p>
+<br>
+<br>
+<script> 
+    result=""
+        function powers() {
+    
+             base = document.getElementById("base").value
+             exponent = document.getElementById("exponent").value
+             var result = "Powers of " + base + " are: "
+             r= 1
+             out = document.getElementById("result")
+    
+            for (i = 1; i <= exponent; i++) {
+                j *= base;
+                result =result+ j + " "
+                }
+                out.innerHTML = result
+            }
+ </script>
+ </body>
+ </html>
